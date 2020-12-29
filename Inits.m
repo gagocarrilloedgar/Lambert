@@ -14,7 +14,7 @@ depf = date2julian ( 2024, 1, 1, 0, 0, 0) - julian_ref;
 departures = depi:5:depf;
 
 % Time of flight
-time = 400:5:5000;
+time = 400:10:700;
 
 % Matrix size
 N = length(departures);

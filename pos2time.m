@@ -24,7 +24,7 @@ function t = pos2time ( x,lam, lam2 )
 a = 1 / (1 - x*x);
 
 % Compute TOF
-if a > 0 % Ellipse
+if a > 0
     alpha = 2 * acos(x);
     beta = 2 * asin(sqrt(lam2 / a));
     if lam < 0
@@ -33,7 +33,7 @@ if a > 0 % Ellipse
     
     t = (a*sqrt(a) * ((alpha - sin(alpha)) ...
         - (beta - sin(beta))))/2;
-else % Hyperbola
+else 
     alpha = 2 * acosh(x);
     beta = 2 * asinh(sqrt(-lam2/a));
     

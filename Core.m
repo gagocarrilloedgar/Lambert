@@ -32,15 +32,15 @@ for k = 1:Z
             
             % Compute and check theta direction
             theta = deltatheta ( rd, ra, 1 ); % Transfer angle
+            % Long/short way tranfer
             if theta > pi
                 lw = 1;
             else
                 lw = 0;
-            end % Long/short way tranfer
+            end 
             
             %Lambert Solver
-            [ v1_, v2_ ] = lambertslv(rd,ra,TOF,mu,theta);
-
+            [ v1_, v2_ ] = lambertslv( rd, ra, TOF, mu, lw, delta,theta);
             
             % Save values for postprocess
             v1(i,j) = norm(v1_-vd);

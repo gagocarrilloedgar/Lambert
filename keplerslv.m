@@ -9,11 +9,11 @@
 % Inputs:
 %   e  = orbit's eccentricity
 %   delta = maximum admisible error
-%   M = Mean anomaly distribution
+%   M = Mean anomaly d
 %
 % Ouput:
 % 
-%   i: Last iteration, recorder in order to evalutate the convergence
+%   i: Last iteration
 %   E : Ecc anomaly,
 %
 %% Core

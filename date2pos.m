@@ -27,21 +27,21 @@
 function [ r, v ] = date2pos ( planet, JD, mu, planar )
 
 % Get orbital elements
-[ a, e, i, M, argp, w ] = obtelements ( planet, JD );
+elemts = obtelements ( planet, JD );
 
 % Compute eccentric anomaly E
-E = keplerslv(M,e,1e-6);
+E = keplerslv(elemts.M,elemts.e,1e-6);
 
 % Compute true anomaly nu
-theta = trueanom(E,e);
+theta = trueanom(E,elemts.e);
 
 % Force planar scenario
 if planar
-    i = 0;
-    %e = 0;
+    elemts.inc = 0;
+    %elemts.e = 0;
 end
 
 % Convert orbital elements to ICF state vector
-[ r, v ] = statevector ( a, e, i, theta, argp, w , mu );
+[ r, v ] = statevector (elemts,theta,mu );
 
 end

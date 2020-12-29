@@ -17,6 +17,7 @@
 %   v1: final velocity at departure 
 %   v2: initial velocity at arrival 
 %
+% source: https://gage.upc.edu/ESEIAAT/Astrodynamics/
 %% Core
 
 function [v1,v2,z] = lambertbis(r1,r2,TOF,mu,theta)

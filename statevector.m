@@ -22,7 +22,14 @@
 %
 %% Core
 
-function [ r_, v_ ] = statevector ( a, e, i, theta, argp, w, mu )
+function [ r_, v_ ] = statevector ( elemnts, theta, mu )
+
+
+e = elemnts.e;
+i = elemnts.inc;
+w = elemnts.omega;
+argp = elemnts.w_;
+a = elemnts.a;
 
 if e~=1
     p = a * (1 - e^2); % Ellipse, Hyperbola

@@ -10,10 +10,10 @@
 %% Core
 % Planets selection 
 departure_planet = 'Earth';
-arrival_planet = 'Saturn';
+arrival_planet = 'Mars';
 
 %Standard gravitational parameter of the sun
-mu = 1.32712440018E11; % [km^3 s^-2]
+mu = 1.32712440018e11; % [km^3 s^-2]
 
 % Solver parameters
 delta = 1e-6; % tolerance error
@@ -22,5 +22,5 @@ delta = 1e-6; % tolerance error
 julian_ref = date2julian ( 2000, 1, 1, 12, 0, 0);
 
 % Planar definition
-planar_ = [0]; %[0,1];
+planar_ = [1]; %[0,1];
 Z = length(planar_);
